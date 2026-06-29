@@ -54,7 +54,7 @@ const cancelBtn = document.querySelector("#cancelBtn");
 
 const calculateBtnHandler = () => {
   errorMsg.innerHTML = "";
-  const inputData = numberInput.textContent;
+  const inputData = numberInput.value;
 
   try {
     validateInput(inputData);

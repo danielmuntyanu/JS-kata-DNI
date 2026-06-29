@@ -9,7 +9,11 @@ export default function validateInput (input) {
 
     input = Number(input)
 
-    if (isNaN(input) || !isFinite(input)) {
+    if (
+        isNaN(input) || 
+        !isFinite(input) ||
+        !Number.isInteger(input)
+    ) {
         throw new Error("el dato introducido es incorrecto")
     }
 

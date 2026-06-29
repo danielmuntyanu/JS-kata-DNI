@@ -18,6 +18,7 @@ describe("validateInput", () => {
     expect(() => validateInput([42])).toThrow("el dato introducido es incorrecto")
     expect(() => validateInput([1, 2, 3])).toThrow("el dato introducido es incorrecto")
     expect(() => validateInput(undefined)).toThrow("el dato introducido es incorrecto")
+    expect(() => validateInput(23.5)).toThrow("el dato introducido es incorrecto")
   })
 
   it('Should throw an error if input is out of range (0 - 99999999)', () => {
