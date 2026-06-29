@@ -2,38 +2,6 @@ import './style.css'
 import calculateLetter from './scripts/calculateLetter.js'
 import validateInput from './scripts/validateInput.js';
 
-const calcBtn = document.querySelector("#calculateBtn");
-const numberInput = document.querySelector("#numberInput");
-const resultLabel = document.querySelector("#result");
-const errorMsg = document.querySelector("#error");
-
-
-const buttonHandler = () => {
-  errorMsg.innerHTML = "";
-  const inputData = numberInput.textContent;
-
-  try {
-    validateInput(inputData);
-  } catch (error) {
-    errorMsg.innerHTML = error.message;
-  }
-
-  const result = calculateLetter(inputData);
-
-  resultLabel.innerHTML = result;
-}
-
-calcBtn.addEventListener(buttonHandler)
-
-
-
-
-
-
-
-
-
-
 document.querySelector('#app').innerHTML = `
 <section>
   <div>
@@ -69,3 +37,27 @@ document.querySelector('#app').innerHTML = `
 
 </section>
 `
+
+
+
+const calcBtn = document.querySelector("#calculateBtn");
+const numberInput = document.querySelector("#numberInput");
+const resultLabel = document.querySelector("#result");
+const errorMsg = document.querySelector("#error");
+
+const buttonHandler = () => {
+  errorMsg.innerHTML = "";
+  const inputData = numberInput.textContent;
+
+  try {
+    validateInput(inputData);
+  } catch (error) {
+    errorMsg.innerHTML = error.message;
+  }
+
+  const result = calculateLetter(inputData);
+
+  resultLabel.innerHTML = result;
+}
+
+calcBtn.addEventListener("click", buttonHandler);
