@@ -6,20 +6,21 @@
   --text-h: #c8b5fd;
   --btn: #a17800;
   --border: #ffb700;
-  --btn-hover: #aa8002;
+  --btn-hover: #ffd34e;
+  --input: #130048;
 }
 
 body {
   @apply 
-    bg-[var(--bg)]
-    text-[var(--text)]
+    bg-(--bg)
+    text-(--text)
     text-center
   ;
 }
 
 h1, h2, h3 {
   @apply 
-    text-[var(--text-h)]
+    text-(--text-h)
     text-3xl
   ;
 }
@@ -39,25 +40,29 @@ section {
 
 .panel {
   @apply 
-  
+    flex gap-2
   ;
 }
 
 #numberInput {
   @apply 
-  
+    border border-(--border) shadow-md
+    rounded-lg bg-(--input) p-4 w-[50%]
   ;
 
 }
 
 #calculateBtn {
   @apply 
-  
+    rounded-lg border shadow-md
+    bg-(--btn) hover:bg-(--btn-hover)
+    p-4 w-[50%] hover:text-black
   ;
 }
 
 #result {
   @apply 
-  
+    px-10 border bg-(--input) shadow-md
+    text-[6rem] rounded-xl text-(--border)
   ;
 }

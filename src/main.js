@@ -26,10 +26,10 @@ document.querySelector('#app').innerHTML = `
   </div>
 
   <label
-      id="result"
-    >
-      T
-    </label>
+    id="result"
+  >
+    ?    
+  </label>
 
 </section>
 `
