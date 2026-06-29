@@ -63,9 +63,11 @@ section {
   ;
 }
 
-.cancel {
+#cancelBtn {
   @apply 
-    bg-(--cancel) hover:bg-(--cansel-hover)
+    rounded-lg border shadow-md
+    bg-(--cancel) hover:bg-(--cancel-hover)
+    p-4 w-[50%] hover:text-black
   ;
 }
 

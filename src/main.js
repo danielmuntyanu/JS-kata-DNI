@@ -3,7 +3,7 @@ import calculateLetter from './scripts/calculateLetter.js'
 import validateInput from './scripts/validateInput.js';
 
 document.querySelector('#app').innerHTML = `
-<section>
+<section id="mainSection">
   <div>
     <h1>Kata - DNI</h1>
     <p>Enter the number between 0 and 99999999 (up to 8 ciphers)</p>
@@ -23,6 +23,12 @@ document.querySelector('#app').innerHTML = `
       Calculate
     </button>
 
+    <button 
+      id="cancelBtn"
+    >
+      Cancel
+    </button>
+
   </div>
 
   <label
@@ -39,15 +45,14 @@ document.querySelector('#app').innerHTML = `
 `
 
 
-
+const mainSection = document.querySelector("#mainSection");
 const calcBtn = document.querySelector("#calculateBtn");
 const numberInput = document.querySelector("#numberInput");
 const resultLabel = document.querySelector("#result");
 const errorMsg = document.querySelector("#error");
+const cancelBtn = document.querySelector("#cancelBtn");
 
-const buttonHandler = async () => {
-  calcBtn.innerHTML = "Cancel"
-
+const calculateBtnHandler = () => {
   errorMsg.innerHTML = "";
   const inputData = numberInput.textContent;
 
@@ -57,11 +62,19 @@ const buttonHandler = async () => {
     errorMsg.innerHTML = error.message;
   }
 
-  const result = await calculateLetter(inputData);
+  const result = calculateLetter(inputData);
 
   resultLabel.innerHTML = result;
-
-  calcBtn.innerHTML = "Calculate"
 }
 
-calcBtn.addEventListener("click", buttonHandler);
+calcBtn.addEventListener("click", calculateBtnHandler);
+
+const cancelBtnHandler = () => {
+  mainSection.innerHTML = `
+    <h1>Program cancelled. Good buy!</h1>
+  `
+}
+
+
+cancelBtn.addEventListener("click", cancelBtnHandler);
+

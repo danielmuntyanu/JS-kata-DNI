@@ -13,7 +13,9 @@ describe("validateInput", () => {
   it('Should throw an error if input is not a number', () => {
     expect(() => validateInput("hola")).toThrow("el dato introducido es incorrecto")
     expect(() => validateInput(null)).toThrow("el dato introducido es incorrecto")
+    expect(() => validateInput(false)).toThrow("el dato introducido es incorrecto")
     expect(() => validateInput("567abc")).toThrow("el dato introducido es incorrecto")
+    expect(() => validateInput([42])).toThrow("el dato introducido es incorrecto")
     expect(() => validateInput([1, 2, 3])).toThrow("el dato introducido es incorrecto")
     expect(() => validateInput(undefined)).toThrow("el dato introducido es incorrecto")
   })

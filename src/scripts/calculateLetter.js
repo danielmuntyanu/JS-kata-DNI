@@ -1,6 +1,12 @@
-export default async function calculateLetter(input) {
-  // Wait for 3 seconds to give the user an opportunity to cancel
-  await new Promise(resolve => setTimeout(resolve, 3000))
+export default function calculateLetter(input) {
+  // T, R, W, A, G, M, Y, F, P, D, X, B, N, J, Z, S, Q, V, H, L, C, K, E
+  const letters = [
+    "T", "R", "W", "A", "G", "M", "Y", 
+    "F", "P", "D", "X", "B", "N",
+    "J", "Z", "S", "Q", "V", "H", "L", 
+    "C", "K", "E"
+  ]
 
-  return "T";
+  
+
 }
