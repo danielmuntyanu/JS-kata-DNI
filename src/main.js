@@ -45,7 +45,9 @@ const numberInput = document.querySelector("#numberInput");
 const resultLabel = document.querySelector("#result");
 const errorMsg = document.querySelector("#error");
 
-const buttonHandler = () => {
+const buttonHandler = async () => {
+  calcBtn.innerHTML = "Cancel"
+
   errorMsg.innerHTML = "";
   const inputData = numberInput.textContent;
 
@@ -55,9 +57,11 @@ const buttonHandler = () => {
     errorMsg.innerHTML = error.message;
   }
 
-  const result = calculateLetter(inputData);
+  const result = await calculateLetter(inputData);
 
   resultLabel.innerHTML = result;
+
+  calcBtn.innerHTML = "Calculate"
 }
 
 calcBtn.addEventListener("click", buttonHandler);

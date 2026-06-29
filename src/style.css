@@ -5,8 +5,10 @@
   --text: #a59eba;
   --text-h: #c8b5fd;
   --btn: #a17800;
+  --cancel: #a11800;
   --border: #ffb700;
   --btn-hover: #ffd34e;
+  --cancel-hover: #fd765e;
   --error: #ff5757;
   --input: #130048;
 }
@@ -58,6 +60,12 @@ section {
     rounded-lg border shadow-md
     bg-(--btn) hover:bg-(--btn-hover)
     p-4 w-[50%] hover:text-black
+  ;
+}
+
+.cancel {
+  @apply 
+    bg-(--cancel) hover:bg-(--cansel-hover)
   ;
 }
 
