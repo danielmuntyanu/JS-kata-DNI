@@ -75,6 +75,5 @@ const cancelBtnHandler = () => {
   `
 }
 
-
 cancelBtn.addEventListener("click", cancelBtnHandler);
 
