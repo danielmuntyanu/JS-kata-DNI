@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0f0038;
+  --text: #a59eba;
+  --text-h: #c8b5fd;
+  --btn: #a17800;
+  --border: #ffb700;
+  --btn-hover: #aa8002;
+}
+
+body {
+  @apply 
+    bg-[var(--bg)]
+    text-[var(--text)]
+    text-center
+  ;
+}
+
+h1, h2, h3 {
+  @apply 
+    text-[var(--text-h)]
+    text-3xl
+  ;
+}
+
+p {
+  @apply 
+    text-sm
+  ;
+}
+
+section {
+  @apply 
+    min-h-screen gap-8
+    flex flex-col justify-center items-center
+  ;
+}
+
+.panel {
+  @apply 
+  
+  ;
+}
+
+#numberInput {
+  @apply 
+  
+  ;
+
+}
+
+#calculateBtn {
+  @apply 
+  
+  ;
+}
+
+#result {
+  @apply 
+  
+  ;
+}
