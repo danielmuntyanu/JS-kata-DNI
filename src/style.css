@@ -7,7 +7,8 @@
   --btn: #a17800;
   --border: #ffb700;
   --btn-hover: #ffd34e;
-  --input: #130048;
+  --input: #ff5757;
+  --error: #130048;
 }
 
 body {
@@ -64,5 +65,11 @@ section {
   @apply 
     px-10 border bg-(--input) shadow-md
     text-[6rem] rounded-xl text-(--border)
+  ;
+}
+
+#error {
+  @apply
+    text-(--error) text-base
   ;
 }
