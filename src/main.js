@@ -58,13 +58,13 @@ const calculateBtnHandler = () => {
 
   try {
     validateInput(inputData);
+    
+    const result = calculateLetter(inputData);
+    
+    resultLabel.innerHTML = result;
   } catch (error) {
     errorMsg.innerHTML = error.message;
   }
-
-  const result = calculateLetter(inputData);
-
-  resultLabel.innerHTML = result;
 }
 
 calcBtn.addEventListener("click", calculateBtnHandler);
