@@ -60,7 +60,7 @@ const calculateBtnHandler = () => {
     validateInput(inputData);
   } catch (error) {
     errorMsg.innerHTML = error.message;
-    return
+    return  
   }
 
   const result = calculateLetter(inputData);
